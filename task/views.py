@@ -18,15 +18,19 @@ def index(request):
             task.date_end = task.date_start + timedelta(days=task.estimate_time)
 
             date_start_task = task.date_start.strftime('%Y-%m-%d')
-            day_start_task = int(date_start_task.split('-')[2])
 
             date_end_task = task.date_end.strftime('%Y-%m-%d')
             day_end_task = int(date_end_task.split('-')[2])
 
-            day_difference = day_end_task - day_start_task
+            date_end_filter = date_end.strftime('%Y-%m-%d')
+
+            # Ver si se paso el mes para agregarle los días restantes
+            if int(date_end_filter.split('-')[1]) > int(date_end_task.split('-')[1]):
+                day_end_task += 30
+
+            day_difference = int(date_end_filter.split('-')[2]) - day_end_task
 
             task.delay = day_difference
-
 
         return render(request, 'index.html', {
             'task_in_process_date': task_in_process_date,
