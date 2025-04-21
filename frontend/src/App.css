@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Inria Sans', sans-serif;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.navbar {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #2c2c2c;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(255,255,255,0.9);
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-list a, .dropdown-toggle {
+  color: rgba(255,255,255,0.87);
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav-list a:hover, .dropdown-toggle:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%; left: 0;
+  background: #2c2c2c;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  display: none;
+  min-width: 160px;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu li {
+  list-style: none;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+.task-table,
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.task-table th,
+.task-table td,
+th, td {
+  border: 1px solid #2c2c2c;
+  padding: 0.75rem;
+  text-align: center;
+}
+.task-table thead,
+thead {
+  background-color: #2c2c2c;
+  color: rgba(255,255,255,0.9);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.badge-danger   { background-color: #dc3545; }
+.badge-warning  { background-color: #ffc107; color: #212529; }
+.badge-success  { background-color: #28a745; }
+.badge-secondary{ background-color: #6c757d; }
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: rgba(255,255,255,0.9);
+}
+.icon-btn:hover {
+  color: #fff;
+}
+
+input, select, textarea {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem;
+  width: 100%;
+  max-width: 300px;
+}
