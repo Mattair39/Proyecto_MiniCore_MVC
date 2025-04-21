@@ -1,4 +1,4 @@
-// frontend/src/components/Layout.jsx
+/* Layout Mini Core Tareas*/
 import React from 'react'
 import { Link } from 'react-router-dom'
 
