@@ -102,5 +102,5 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = os.getenv(
     'CORS_ALLOWED_ORIGINS',
-    'http://localhost:5173,https://tu-frontend.onrender.com'
+    'http://localhost:5173,https://proyecto-minicore.onrender.com'
 ).split(',')
