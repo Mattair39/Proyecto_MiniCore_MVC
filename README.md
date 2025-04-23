@@ -54,8 +54,10 @@ La base de datos SQLite se utiliza por defecto y no requiere de configuraciones 
    ```bash
    cd backend
    ```
-4. Instalar el archivo requirements.txt:
+4. Crear un entorno virtual e instalar el archivo requirements.txt:
    ```bash
+   python -m venv env
+   source env/bin/activate
    pip install requirements.txt
    ```
 5. Entrar a la carpeta backend (donde se encuentra **manage.py**):
